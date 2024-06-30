@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="container"  *ngFor="let product_detail of product_detail">
+    <div style="margin-left: -20px;margin-top: -25px;">
+      <button type="button" class="btn" routerLink="/products" style="font-size: 2vw; font-weight: 900; color: green;">&#11148;</button>
+    </div>
+    <div class="product-image" >
+      <img style="width: 250px;" src="{{product_detail.Img}}" alt="Product Image">
+    </div>
+    <div class="product-details">
+      <h2 class="product-title">{{product_detail.Name}}</h2>
+      <p class="product-price">{{product_detail.Price}} VND</p>
+      <div class="product-description">
+        <p>{{product_detail.Description}}</p>
+        <p>Features:</p>
+        <ul>
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

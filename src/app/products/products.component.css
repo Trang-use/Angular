@@ -1,0 +1,19 @@
+
+  .table-custom {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .table-custom thead th {
+    background-color: #198754;
+    color: white;
+  }
+
+  .table-custom tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .table-custom img {
+    border-radius: 8px;
+  }

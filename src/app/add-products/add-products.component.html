@@ -1,0 +1,33 @@
+<div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+  <div style="margin-top: 7%;">
+    <h1 style="color: white; font-size: 4vw;">ADD NEW PRODUCTS</h1>
+    <button type="submit" class="btn btn-outline-light" routerLink="/products">List Products</button>
+
+  </div>
+  <div style="margin-left: 10%;">
+    <form style="margin-top: 30%;">
+      <div data-mdb-input-init class="form-floating mb-3">
+        <input (change) = "onChangeName($event)" type="text" class="form-control" id="floatingInputName" placeholder="Name...">
+        <label for="floatingInputName">Name</label>
+      </div>
+      <div data-mdb-input-init class="form-floating mb-3">
+        <input (change) = "onChangePrice($event)" type="text" class="form-control" id="floatingInputPrice" placeholder="Price...">
+        <label for="floatingInputPrice">Price</label>
+      </div>
+      <div data-mdb-input-init class="form-floating mb-3">
+        <input (change) = "onChangeDescription($event)" type="text" class="form-control" id="floatingInputDescription" placeholder="Description...">
+        <label for="floatingInputDescription">Description</label>
+      </div>
+      <div data-mdb-input-init id="size-container" class="mb-3">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Size">
+          <button type="button" class="btn btn-outline-secondary" (click)="addSizeInput()">+</button>
+        </div>
+      </div>
+      <div data-mdb-input-init class="input-group mb-3">
+        <input (change) = "onChangeImage($event)"  type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Image">
+      </div>
+      <button (click) = "Add_Product($event)" type="submit" class="btn btn-outline-secondary" style="margin-left: 75%;">Submit</button>
+    </form>
+  </div>
+</div>

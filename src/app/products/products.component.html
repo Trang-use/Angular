@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <h1 style="text-align: center; color: white;">LIST PRODUCTS</h1>
+  </div>
+  <button type="button" class="btn btn-outline-light" style="margin-left: 78%; margin-top: -80px;" routerLink="/add-products">Add new product</button>
+  <div style="width: 80%; margin-left: 10%;">
+    <table class="table table-hover table-custom">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Description</th>
+          <th scope="col">Size</th>
+          <th scope="col">Image</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody  *ngFor="let list_items of Products">
+        <tr>
+          <th scope="row">{{list_items.Name}}</th>
+          <td>{{list_items.Price}} VNĐ</td>
+          <td>{{list_items.Description}}</td>
+          <td>{{list_items.Size}}</td>
+          <td><img src="{{list_items.Current_Img}}" style="width: 100px;"></td>
+          <td><button type="button" class="btn btn-success" (click)="onSelect(list_items._id)">Detail</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
